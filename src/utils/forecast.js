@@ -12,7 +12,7 @@ const forecast = (lat, long, cb) => {
     } else {
       cb(
         undefined,
-        `${body.current.weather_descriptions[0]}. It's currently ${body.current.temperature} degrees out. It feels like ${body.current.feelslike} degrees out.\n`
+        `${body.location.region}, ${body.location.country}.${body.current.weather_descriptions[0]}. It's currently ${body.current.temperature} degrees out. It feels like ${body.current.feelslike} degrees out.\n`
       );
     }
   });
